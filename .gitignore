@@ -1,0 +1,17 @@
+# CSS files within app
+.css
+
+# OS generated files
+.DS_Store
+
+# npm files
+node_modules
+
+# Bower files
+lib
+
+# Built files
+build
+
+# Temp files
+temp

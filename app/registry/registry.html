@@ -1,0 +1,14 @@
+<div class="registry section jumbotron">
+    <div class="container">
+        <div class="sectionTitle">Registry</div>
+        <p>We feel very blessed that we are able to share this special moment in our lives with friends and family. If you feel inclined to purchase us a wedding gift, we have registered at the following places:</p>
+        <div class="locations">
+            <div class="location" ng-repeat="location in locations">
+                <a ng-href="{{location.url}}">
+                    <img ng-src="{{location.img}}" />
+                    <span>{{location.name}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+<div>

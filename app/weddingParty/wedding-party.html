@@ -1,0 +1,43 @@
+<div class="weddingParty section jumbotron">
+    <div class="container">
+        <div class="sectionTitle">Wedding Party</div>
+        <div class="col-md-6">
+            <div>Bridesmaids</div>
+            <div class="bridesmaid media" ng-repeat="maid in bridesmaids">
+                <div class="media-left">
+                    <img ng-src="{{maid.img}}" alt="">
+                </div>
+                <div class="media-body">
+                    <p class="name">{{maid.name}}</p>
+                    <p class="title">{{maid.title}}</p>
+                    <p class="story">{{maid.story}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div>Groomsmen</div>
+            <div class="groomsman media" ng-repeat="man in groomsmen">
+                <div class="media-left">
+                    <img class="media-object" ng-src="{{man.img}}" alt="">
+                </div>
+                <div class="media-body">
+                    <p class="name">{{man.name}}</p>
+                    <p class="title">{{man.title}}</p>
+                    <p class="story">{{man.story}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- <div class="media">
+          <div class="media-left">
+            <a href="#">
+              <img class="media-object" src="..." alt="...">
+            </a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">Media heading</h4>
+            ...
+          </div>
+        </div> -->
+</div>
