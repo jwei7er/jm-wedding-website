@@ -12,13 +12,16 @@ module.exports = function(grunt) {
       },
       css: {
         expand: true,
-        src: 'app/**/*.css',
-        dest: 'build/',
+        src: [
+          'lib/bootstrap/dist/css/bootstrap.min.css',
+          'app/**/*.css'
+        ],
+        dest: 'build/css/',
         flatten: true
       },
       images: {
         expand: true,
-        src: 'app/images/**/*.jpg',
+        src: 'app/images/**/*',
         dest: 'build/img/',
         flatten: true
       },
@@ -29,11 +32,17 @@ module.exports = function(grunt) {
             cwd: 'lib/',
             src: [
               'angular/angular.min.js',
-              'bootstrap/dist/css/bootstrap.min.css',
               'bootstrap/dist/js/bootstrap.min.js',
               'jquery/dist/jquery.min.js'
             ],
             dest: 'build/',
+            flatten: true
+          }, {
+            expand: true,
+            src: [
+              'lib/bootstrap/dist/fonts/*',
+            ],
+            dest: 'build/fonts/',
             flatten: true
           }
         ]
