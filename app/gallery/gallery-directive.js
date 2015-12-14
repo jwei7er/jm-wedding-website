@@ -3,7 +3,6 @@ angular.module('myApp').directive('gallery', function() {
         restrict: "E",
         replace: true,
         scope: {},
-        controller: 'GalleryCtrl',
         templateUrl: 'app/gallery/gallery.html'
     };
 });
