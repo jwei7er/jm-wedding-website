@@ -1,19 +1,18 @@
-<div class="ourStory section jumbotron">
+<div id="ourStory" class="ourStory section jumbotron">
     <div class="container">
         <div class="sectionTitle">Our Story</div>
         <div class="story" ng-repeat="story in stories">
-            <div class="storyTitle">{{story.title}}</div>
-            <div class="storyLine"></div>
+            <div class="sectionSubtitle">{{story.title}}</div>
             <div class="row">
-                <div class="hisStory col-md-6">
-                    <div class="hisSection">
-                        <div class="title">His Story</div>
+                <div class="col-md-6">
+                    <div class="hisStory">
+                        <img src="img/jordan_small.jpg" alt="Jordan" />
                         <p>{{story.his}}</p>
                     </div>
                 </div>
-                <div class="herStory col-md-6">
-                    <div class="herSection">
-                        <div class="title">Her Story</div>
+                <div class="col-md-6">
+                    <div class="herStory">
+                        <img src="img/megan_small.jpg" alt="Megan" />
                         <p>{{story.hers}}</p>
                     </div>
                 </div>
