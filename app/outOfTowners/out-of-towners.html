@@ -1,17 +1,56 @@
-<div class="outOfTowners section jumbotron">
+<div id="outOfTowners" class="outOfTowners section jumbotron">
+    <img src="img/eugene-map.svg" alt="Eugene, OR" class="full-width" />
     <div class="container">
         <div class="sectionTitle">Out of Towners</div>
         <div class="category">
-            <h3>Lodging</h3>
-            <p>We've reserved a block of rooms at three different hotels in and around Eugene, OR.</p>
+            <div class="sectionSubtitle">How To Get Here</div>
+            <div class="row">
+                <div class="col-sm-6 airport" ng-repeat="airport in airports">
+                    <div class="name"><a href="{{airport.website}}" target="_blank">{{airport.name}}</a></div>
+                    <div class="distance">{{airport.distance}}</div>
+                    <div class="directions"><a href="{{airport.directions}}" target="_blank">Directions</a></div>
+                </div>
+            </div>
         </div>
+
         <div class="category">
-            <h3>Places to eat</h3>
-            <p>We definitely like to eat and lucky for you Eugene has some real treasures when it comes to food. Like a good burger? Got it covered. Like vegan options. Oh boy, you've come to the right place. Like organic locally grown ingredients. You might not want to leave after stopping by.</p>
+            <div class="sectionSubtitle">Rest Your Head</div>
+            <p>We encourage our guests to make reservations early because there are multiple events going on the weekend of our wedding. We are unable to get a reduced rate at hotels until the Oregon Ducks football schedule is released. Once it is released (sometime in the spring), we will add more details here on the website. We still recommend booking early, because the prices might increase when the schedule is released. We suggest using Airbnb and VRBO. Here are also some hotels to consider.</p>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 hotel" ng-repeat="hotel in hotels">
+                    <div class="name"><a href="{{hotel.website}}">{{hotel.name}}</a></div>
+                    <div class="address">{{hotel.address}}</div>
+                    <div class="phone">{{hotel.phone}}</div>
+                    <div class="distance"><span>{{hotel.distance}}</span></div>
+                </div>
+            </div>
         </div>
+
         <div class="category">
-            <h3>Things to do</h3>
-            <p>Oregon is a beautiful state with plenty of options to keep you and your visit busy.</p>
+            <div class="sectionSubtitle">Eat/Drink Local!</div>
+            <p>These are some of our favorite places to grab a bite to eat and a pint to drink.</p>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-3 food" ng-repeat="foodCategory in foodCategories">
+                    <div class="food-category">{{foodCategory.category}}</div>
+                    <div class="venue" ng-repeat="venue in foodCategory.venues">
+                        <span class="name">{{venue.name}}</span>
+                        <span ng-if="venue.cost">(<span class="cost">{{venue.cost}}</span>)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="sectionSubtitle">Explore Eugene/Oregon</div>
+            <p>If you are in town for a few extra days, there are plenty of activities to keep you busy.</p>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 explore" ng-repeat="explore in exploreIdeas">
+                    <div class="idea">{{explore.idea}}</div>
+                    <div class="info">{{explore.info}}</div>
+                </div>
+            </div>
+            <div class="more-ideas"><a href="http://traveloregon.com">More Ideas</a>
         </div>
     </div>
 <div>
