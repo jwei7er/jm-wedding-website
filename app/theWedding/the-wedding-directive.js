@@ -3,7 +3,6 @@ angular.module('myApp').directive('theWedding', function() {
         restrict: "E",
         replace: true,
         scope: {},
-        controller: 'TheWeddingCtrl',
         templateUrl: 'app/theWedding/the-wedding.html'
     };
 });
