@@ -26,6 +26,10 @@ body {
     font-family: @base-font-family;
 }
 
+.jumbotron {
+    margin-bottom: 0;
+}
+
 .navbar {
     .navbar-brand {
         font-family: @font-cursive-header;
@@ -50,7 +54,8 @@ img.full-width {
 
 .jumbotron {
     img.full-width + div.container {
-        margin-top: 48px;
+        padding-top: 48px;
+        padding-bottom: 48px;
     }
 }
 
@@ -66,9 +71,12 @@ img.full-width {
     .sectionSubtitle {
         font-size: 2em;
         text-align: center;
-        margin-bottom: 15px;
         color: @secondaryColor;
         font-family: @font-section-subtitle;
+
+        & + div, & + p {
+            margin-top: 15px;
+        }
     }
 }
 
@@ -84,7 +92,12 @@ img.full-width {
     }
     .container {
         font-family: @font-cursive-header;
+    }
+    .welcome1 {
         font-size: 4em;
+    }
+    .welcome2, .welcome3 {
+        font-size: 3em;
     }
 }
 
@@ -130,9 +143,13 @@ img.full-width {
 
 .theWedding {
     background-color: @secondaryBackgroundColor;
-    padding-top: 0;
-
     text-align: center;
+
+    &.jumbotron {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
 
     .date, .title, .address {
         font-size: 1.5em;
@@ -155,7 +172,7 @@ img.full-width {
             text-align: center;
 
             img {
-                width: 200px;
+                width: 150px;
                 height: 150px;
                 border-radius: 100px;
                 margin-bottom: 20px;
@@ -188,12 +205,13 @@ img.full-width {
 .outOfTowners {
     background-color: @primaryBackgroundColor;
     text-align: center;
-    padding-top: 0;
 
-    ul {
-        padding: 0;
-        list-style-type: none;
+    &.jumbotron {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
+
     p {
         font-size: 1.25em;
         text-align: justify;
@@ -282,6 +300,17 @@ img.full-width {
     background-color: @secondaryBackgroundColor;
     padding-top: 0px;
     padding-bottom: 0px;
+
+    .carousel {
+        .carousel-inner {
+            .item {
+                img {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
 }
 
 .registry {
@@ -300,6 +329,7 @@ img.full-width {
 }
 
 footer {
-    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
 }
