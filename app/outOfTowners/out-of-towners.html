@@ -2,7 +2,7 @@
     <img src="img/eugene-map.svg" alt="Eugene, OR" class="full-width" />
     <div class="container">
         <div class="sectionTitle">Out of Towners</div>
-        <div class="category">
+        <div class="category how-to-get-here">
             <div class="sectionSubtitle">How To Get Here</div>
             <div class="row">
                 <div class="col-sm-6 airport" ng-repeat="airport in airports">
@@ -13,12 +13,12 @@
             </div>
         </div>
 
-        <div class="category">
+        <div class="category rest-your-head">
             <div class="sectionSubtitle">Rest Your Head</div>
             <p>We encourage our guests to make reservations early because there are multiple events going on the weekend of our wedding. We are working on getting reduced hotel rates and will continue to add more details here. One option to consider is booking with Airbnb or VRBO. Here are also some hotels to consider.</p>
             <div class="row">
                 <div class="col-sm-6 col-md-4 hotel" ng-repeat="hotel in hotels">
-                    <div class="name"><a href="{{hotel.website}}">{{hotel.name}}</a></div>
+                    <div class="name"><a href="{{hotel.website}}" target="_blank">{{hotel.name}}</a></div>
                     <div class="address">{{hotel.address}}</div>
                     <div class="phone">{{hotel.phone}}</div>
                     <div class="distance"><span>{{hotel.distance}}</span></div>
@@ -26,10 +26,9 @@
             </div>
         </div>
 
-        <div class="category">
+        <div class="category eat-drink-local">
             <div class="sectionSubtitle">Eat/Drink Local!</div>
             <p>These are some of our favorite places to grab a bite to eat and a pint to drink.</p>
-
             <div class="row">
                 <div class="col-sm-6 col-md-3 food" ng-repeat="foodCategory in foodCategories">
                     <div class="food-category">{{foodCategory.category}}</div>
@@ -41,7 +40,7 @@
             </div>
         </div>
 
-        <div class="category">
+        <div class="category explore-eugene-oregon">
             <div class="sectionSubtitle">Explore Eugene/Oregon</div>
             <p>If you are in town for a few extra days, there are plenty of activities to keep you busy.</p>
             <div class="row">
@@ -50,7 +49,7 @@
                     <div class="info">{{explore.info}}</div>
                 </div>
             </div>
-            <div class="more-ideas"><a href="http://traveloregon.com">More Ideas</a>
+            <div class="more-ideas"><a href="http://traveloregon.com" target="_blank">More Ideas</a>
         </div>
     </div>
 <div>

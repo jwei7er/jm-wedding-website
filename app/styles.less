@@ -19,6 +19,12 @@
 @font-section-subtitle: 'Cinzel', Verdana, Geneva, sans-serif;
 @secondary-font-family: 'Junge', "Times New Roman", Times, serif;
 
+@screen-xs-max: 767px;
+@screen-sm-min: 768px;
+@screen-sm-max: 991px;
+@screen-md-min: 992px;
+@screen-md-max: 1199px;
+@screen-lg-min: 1200px;
 
 body {
     margin-top: 50px;
@@ -221,78 +227,94 @@ img.full-width {
         margin-bottom: 30px;
     }
 
-    .airport {
-        margin-bottom: 15px;
-        text-align: center;
+    .how-to-get-here {
+        .airport {
+            margin-bottom: 15px;
+            text-align: center;
 
-        .name {
-            font-size: 1.5em;
-            font-family: @secondary-font-family;
-        }
-        .distance {
-            font-size: 1.25em;
-            color: @tertiaryColor;
-        }
-        .directions {
-            font-size: 1.25em;
-            color: @tertiaryColor;
-        }
-    }
-
-    .hotel {
-        margin-bottom: 15px;
-        text-align: center;
-        .name {
-            font-size: 1.5em;
-            font-family: @secondary-font-family;
-        }
-        .address {
-            font-size: 1.25em;
-            color: @tertiaryColor;
-        }
-        .phone {
-            font-size: 1.25em;
-            color: @tertiaryColor;
-        }
-        .website {
-            font-size: 1.25em;
-            color: @tertiaryColor;
-        }
-    }
-
-    .food {
-        margin-bottom: 15px;
-        .food-category {
-            font-size: 1.5em;
-            color: @secondaryColor;
-            font-family: @font-section-subtitle;
-        }
-        .venue {
-            font-size: 1.25em;
-            font-family: @secondary-font-family;
-
-            .cost {
-                color: green;
-                font-weight: 700;
+            .name {
+                font-size: 1.5em;
+                font-family: @secondary-font-family;
+            }
+            .distance {
+                font-size: 1.25em;
+                color: @tertiaryColor;
+            }
+            .directions {
+                font-size: 1.25em;
+                color: @tertiaryColor;
             }
         }
     }
 
-    .explore {
-        margin-bottom: 15px;
-        .idea {
+    .rest-your-head {
+        .hotel {
+            margin-bottom: 15px;
+            text-align: center;
+            .name {
+                font-size: 1.5em;
+                font-family: @secondary-font-family;
+            }
+            .address {
+                font-size: 1.25em;
+                color: @tertiaryColor;
+            }
+            .phone {
+                font-size: 1.25em;
+                color: @tertiaryColor;
+            }
+            .website {
+                font-size: 1.25em;
+                color: @tertiaryColor;
+            }
+        }
+    }
+
+    .eat-drink-local {
+        .food {
+            margin-bottom: 15px;
+            .food-category {
+                font-size: 1.5em;
+                color: @secondaryColor;
+                font-family: @font-section-subtitle;
+            }
+            .venue {
+                font-size: 1.25em;
+                font-family: @secondary-font-family;
+
+                .cost {
+                    color: green;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .explore-eugene-oregon {
+        .explore {
+            margin-bottom: 15px;
+            .idea {
+                font-size: 1.5em;
+                font-family: @secondary-font-family;
+            }
+            .info {
+                font-size: 1.25em;
+                color: @tertiaryColor;
+            }
+        }
+        .more-ideas {
+            text-align: center;
             font-size: 1.5em;
             font-family: @secondary-font-family;
         }
-        .info {
-            font-size: 1.25em;
-            color: @tertiaryColor;
-        }
     }
-    .more-ideas {
-        text-align: center;
-        font-size: 1.5em;
-        font-family: @secondary-font-family;
+
+    @media (min-width: @screen-sm-min) {
+        .eat-drink-local, .explore-eugene-oregon {
+            p {
+                text-align: center;
+            }
+        }
     }
 }
 
