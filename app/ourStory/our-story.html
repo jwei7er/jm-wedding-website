@@ -1,0 +1,22 @@
+<div id="ourStory" class="ourStory section jumbotron">
+    <div class="container">
+        <div class="sectionTitle">Our Story</div>
+        <div class="story" ng-repeat="story in stories">
+            <div class="sectionSubtitle">{{story.title}}</div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="hisStory">
+                        <img src="img/jordan-profile.jpg" alt="Jordan" />
+                        <p>{{story.his}}</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="herStory">
+                        <img src="img/megan-profile.jpg" alt="Megan" />
+                        <p>{{story.hers}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

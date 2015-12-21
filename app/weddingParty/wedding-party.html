@@ -1,0 +1,29 @@
+<div id="weddingParty" class="weddingParty section jumbotron">
+    <div class="container">
+        <div class="sectionTitle">Wedding Party</div>
+        <div class="col-md-6">
+            <div class="bridesmaid" ng-repeat="maid in bridesmaids">
+                <div class="header">
+                    <img ng-src="{{maid.img}}" alt="" />
+                    <div class="name-container">
+                        <div class="name">{{maid.name}}</div>
+                        <div class="title">{{maid.title}}</div>
+                    </div>
+                </div>
+                <p class="story">{{maid.story}}</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="groomsman" ng-repeat="man in groomsmen">
+                <div class="header">
+                    <img ng-src="{{man.img}}" alt="" />
+                    <div class="name-container">
+                        <div class="name">{{man.name}}</div>
+                        <div class="title">{{man.title}}</div>
+                    </div>
+                </div>
+                <p class="story">{{man.story}}</p>
+            </div>
+        </div>
+    </div>
+</div>
