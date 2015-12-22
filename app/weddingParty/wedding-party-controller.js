@@ -17,7 +17,7 @@ angular.module('myApp').controller('WeddingPartyCtrl', ['$scope',
                 title: "Bridesmaid",
                 story: "She may be short, but she is mighty! I've known Dar since middle school, but we have definitely gotten closer in the past few years. I can't even count the number of times I've slept on Dar’s couch in Portland. She's one of those friends that you can go months without talking to, but the next time you see each other it feels like it's only been a week."
             }, {
-                name: "Rachel Johnson",
+                name: "Rachel Allen",
                 img: "img/rachel-profile.jpg",
                 title: "Bridesmaid",
                 story: "I met Rachel working at the University of Oregon. It’s hard meeting people in a new city - Rachel was one of my first friends in town and has helped make Eugene feel like home. One day at Taco Tuesday we were talking about online dating sites, and Rachel encouraged me to try Match. Who would have thought that I would end up marrying my first Match date! She’s one of the most caring people I've met, and I look forward to watching her get married this year too!"
