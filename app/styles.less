@@ -12,7 +12,6 @@
 @secondaryBackgroundColor: @grayBlue;
 
 @secondaryColor: @dimGray;
-@tertiaryColor: @darkSlateGray;
 
 @base-font-family: 'Quattrocento', "Times New Roman", Times, serif;
 @font-cursive-header: 'Great Vibes', cursive, serif;
@@ -153,14 +152,23 @@ img.full-width {
         font-size: 4em;
     }
 
-    @media (max-width: @screen-xs-max) {
-        .welcome1 {
-            font-size: 3.5em;
-        }
-    }
-
     .welcome2, .welcome3 {
         font-size: 3em;
+    }
+
+    @media (max-width: @screen-xs-max) {
+        .welcome1, .welcome2, .welcome3 {
+            font-size: 2em;
+        }
+        border-bottom: 5px solid #FFF;
+    }
+
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+        border-bottom: 10px solid #FFF;
+    }
+
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+        border-bottom: 12px solid #FFF;
     }
 }
 
@@ -217,10 +225,6 @@ img.full-width {
     .date, .title, .address {
         font-size: 1.5em;
         font-family: @secondary-font-family;
-    }
-
-    .address {
-        // color: @tertiaryColor;
     }
 }
 
@@ -296,12 +300,10 @@ img.full-width {
             .distance {
                 font-size: 1.25em;
                 font-size: 1.1em;
-                // color: @tertiaryColor;
             }
             .directions {
                 font-size: 1.25em;
                 font-size: 1.1em;
-                // color: @tertiaryColor;
             }
         }
     }
@@ -316,15 +318,12 @@ img.full-width {
             }
             .address {
                 font-size: 1.1em;
-                // color: @tertiaryColor;
             }
             .phone {
                 font-size: 1.1em;
-                // color: @tertiaryColor;
             }
             .distance {
                 font-size: 1.1em;
-                // color: @tertiaryColor;
             }
         }
     }
@@ -359,7 +358,6 @@ img.full-width {
             }
             .info {
                 font-size: 1.1em;
-                // color: @tertiaryColor;
             }
         }
         .more-ideas {
@@ -384,6 +382,11 @@ img.full-width {
     padding-bottom: 0px;
 
     .carousel {
+        .carousel-indicators {
+            left: 35%;
+            width: 90%;
+        }
+
         .carousel-inner {
             .item {
                 img {
