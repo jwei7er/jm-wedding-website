@@ -9,7 +9,7 @@ angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
             }, {
                 name: "Portland International Airport (PDX)",
                 website: "http://flypdx.com/pdx",
-                distance: "126 miles | 2 hours 10 minute drive",
+                distance: "126 miles | 2 hour 10 minute drive",
                 directions: "https://www.google.com/maps/dir/Portland+International+Airport,+Northeast+Airport+Way,+Portland,+OR/Mount+Pisgah+Arboretum,+Frank+Parrish+Road,+Eugene,+OR/@44.7948083,-123.9311777,8z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x5495a0aa74dc20d1:0x5bda7693380e5c3d!2m2!1d-122.5950942!2d45.5897694!1m5!1m1!1s0x54c0dfeaf5bb2711:0x714799a0f1538344!2m2!1d-122.9807488!2d44.0069736?hl=en"
             }
         ];
@@ -66,7 +66,7 @@ angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
                     { name: "Falling Sky Delicatessen", cost: "$$" },
                     { name: "Bier Stein", cost: "$$" },
                     { name: "Cornucopia", cost: "$$" },
-                    { name: "Mucho Gusto", cost: "$" },
+                    { name: "Mucho Gusto", cost: "$" }
                 ]
             }, {
                 category: "Dinner",
@@ -77,17 +77,17 @@ angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
                     { name: "Pizza Research Institute", cost: "$$" },
                     { name: "Belly Taqueria", cost: "$$" },
                     { name: "Sushi Pure", cost: "$$" },
-                    { name: "Marche", cost: "$$$" },
+                    { name: "Marche", cost: "$$$" }
                 ]
             }, {
                 category: "Drinks/Dessert",
                 venues: [
-                    { name: "Bier Stein" },
-                    { name: "Ninkasi" },
-                    { name: "Oakshire" },
-                    { name: "Rye" },
-                    { name: "Izakaya Meiji" },
-                    { name: "Sweet Life Patisserie" },
+                    { name: "Bier Stein", cost: "$$" },
+                    { name: "Izakaya Meiji", cost: "$$" },
+                    { name: "Ninkasi", cost: "$" },
+                    { name: "Oakshire", cost: "$" },
+                    { name: "Rye", cost: "$$" },
+                    { name: "Sweet Life Patisserie", cost: "$" }
                 ]
             }
         ];
@@ -97,14 +97,14 @@ angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
                 idea: "Go on a Hike",
                 info: "Spencer's Butte, Mt Pisgah, Hobbit Trail"
             }, {
+                idea: "Go Wine Tasting",
+                info: "Sarver, Noble, Sweet Cheeks, & more"
+            }, {
                 idea: "Visit Covered Bridges",
                 info: "19 are located in our county"
             }, {
                 idea: "Visit the Coast",
                 info: "Florence, Newport, Thor's Well"
-            }, {
-                idea: "Go Wine Tasting",
-                info: "Sarver, Noble, Sweet Cheeks, & more"
             }, {
                 idea: "Visit Portland",
                 info: "2 hour drive north"
