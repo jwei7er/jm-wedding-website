@@ -53,7 +53,7 @@ angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
             }, {
                 category: "Lunch",
                 venues: [
-                    { name: "Bahn Mi", cost: "$" },
+                    { name: "Bon Mi", cost: "$" },
                     { name: "Laughing Planet", cost: "$" },
                     { name: "Falling Sky Delicatessen", cost: "$$" },
                     { name: "Bier Stein", cost: "$$" },
