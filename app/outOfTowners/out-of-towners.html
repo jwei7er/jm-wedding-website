@@ -39,7 +39,7 @@
                 <div class="col-sm-6 col-md-3 food" ng-repeat="foodCategory in foodCategories">
                     <div class="food-category">{{foodCategory.category}}</div>
                     <div class="venue" ng-repeat="venue in foodCategory.venues">
-                        <span class="name">{{venue.name}}</span>
+                        <span class="name"><a href="{{venue.website}}" target="_blank">{{venue.name}}</a></span>
                         <span ng-if="venue.cost">(<span class="cost">{{venue.cost}}</span>)</span>
                     </div>
                 </div>

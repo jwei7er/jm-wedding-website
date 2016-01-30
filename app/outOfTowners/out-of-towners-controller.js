@@ -44,42 +44,42 @@ angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
             {
                 category: "Breakfast",
                 venues: [
-                    { name: "Off the Waffle", cost: "$" },
-                    { name: "New Day Bakery", cost: "$" },
-                    { name: "Morning Glory (Vegetarian)", cost: "$$" },
-                    { name: "Agate Alley Bistro", cost: "$$" },
-                    { name: "Voodoo Doughnuts", cost: "$" }
+                    { name: "Off the Waffle", website: "http://offthewaffle.com", cost: "$" },
+                    { name: "New Day Bakery", website: "http://newdaybakery.net", cost: "$" },
+                    { name: "Morning Glory (Vegetarian)", website: "http://www.morninggloryeugene.com", cost: "$$" },
+                    { name: "Agate Alley Bistro", website: "http://www.agatealley.com", cost: "$$" },
+                    { name: "Voodoo Doughnuts", website: "http://voodoodoughnut.com", cost: "$" }
                 ]
             }, {
                 category: "Lunch",
                 venues: [
-                    { name: "Bon Mi", cost: "$" },
-                    { name: "Laughing Planet", cost: "$" },
-                    { name: "Falling Sky Delicatessen", cost: "$$" },
-                    { name: "Bier Stein", cost: "$$" },
-                    { name: "Cornucopia", cost: "$$" },
-                    { name: "Mucho Gusto", cost: "$" }
+                    { name: "Bon Mi", website: "http://bonmieugene.com", cost: "$" },
+                    { name: "Laughing Planet", website: "http://laughingplanetcafe.com/home", cost: "$" },
+                    { name: "Falling Sky Delicatessen", website: "https://fallingskybrewing.com/falling-sky-brewing-deli-menu.html", cost: "$$" },
+                    { name: "Bier Stein", website: "http://thebierstein.com", cost: "$$" },
+                    { name: "Cornucopia", website: "http://www.cornucopiaeugene.com", cost: "$$" },
+                    { name: "Mucho Gusto", website: "http://www.westrauntconcepts.com/welcome-mg.html", cost: "$" }
                 ]
             }, {
                 category: "Dinner",
                 venues: [
-                    { name: "Noli", cost: "$$" },
-                    { name: "Sabai", cost: "$$" },
-                    { name: "Tacovore", cost: "$" },
-                    { name: "Pizza Research Institute", cost: "$$" },
-                    { name: "Belly Taqueria", cost: "$$" },
-                    { name: "Sushi Pure", cost: "$$" },
-                    { name: "Marche", cost: "$$$" }
+                    { name: "Noli", website: "http://www.noliitaliancafe.com", cost: "$$" },
+                    { name: "Sabai", website: "http://www.sabaicafe.com", cost: "$$" },
+                    { name: "Tacovore", website: "http://tacovorepnw.com", cost: "$" },
+                    { name: "Pizza Research Institute", website: "http://www.pizzaresearchinstitute.com", cost: "$$" },
+                    { name: "Belly Taqueria", website: "http://www.bellytaqueria.com", cost: "$$" },
+                    { name: "Sushi Pure", website: "http://www.sushipureeugene.com", cost: "$$" },
+                    { name: "Marche", website: "http://marcherestaurant.com", cost: "$$$" }
                 ]
             }, {
                 category: "Drinks/Dessert",
                 venues: [
-                    { name: "Bier Stein", cost: "$$" },
-                    { name: "Izakaya Meiji", cost: "$$" },
-                    { name: "Ninkasi", cost: "$" },
-                    { name: "Oakshire", cost: "$" },
-                    { name: "Rye", cost: "$$" },
-                    { name: "Sweet Life Patisserie", cost: "$" }
+                    { name: "Bier Stein", website: "http://thebierstein.com", cost: "$$" },
+                    { name: "Izakaya Meiji", website: "http://izakayameiji.com", cost: "$$" },
+                    { name: "Ninkasi", website: "http://www.ninkasibrewing.com/visit/tasting-room", cost: "$" },
+                    { name: "Oakshire", website: "http://oakbrew.com/brewery/public-house", cost: "$" },
+                    { name: "Rye", website: "http://ryeon3rd.com", cost: "$$" },
+                    { name: "Sweet Life Patisserie", website: "http://sweetlifedesserts.com", cost: "$" }
                 ]
             }
         ];
