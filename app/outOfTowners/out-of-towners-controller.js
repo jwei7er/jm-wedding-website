@@ -54,7 +54,7 @@ angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
                 venues: [
                     { name: "Off the Waffle", cost: "$" },
                     { name: "New Day Bakery", cost: "$" },
-                    { name: "Morning Glory", cost: "$$" },
+                    { name: "Morning Glory (Vegetarian)", cost: "$$" },
                     { name: "Agate Alley Bistro", cost: "$$" },
                     { name: "Voodoo Doughnuts", cost: "$" }
                 ]
