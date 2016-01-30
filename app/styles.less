@@ -12,7 +12,6 @@
 @secondaryBackgroundColor: @grayBlue;
 
 @secondaryColor: @dimGray;
-@tertiaryColor: @darkSlateGray;
 
 @base-font-family: 'Quattrocento', "Times New Roman", Times, serif;
 @font-cursive-header: 'Great Vibes', cursive, serif;
@@ -75,10 +74,10 @@ body {
         float: none!important;
         margin: 7.5px -15px;
     }
-    .navbar-nav>li {
+    .navbar-nav > li {
         float: none;
     }
-    .navbar-nav>li>a {
+    .navbar-nav > li > a {
         padding-top: 10px;
         padding-bottom: 10px;
     }
@@ -98,7 +97,6 @@ body {
 img.full-width {
     width: 100%;
     height: auto;
-
 }
 
 .jumbotron {
@@ -109,7 +107,7 @@ img.full-width {
 }
 
 .section {
-    .sectionTitle {
+    .section-title {
         font-size: 4em;
         font-weight: 400;
         text-align: center;
@@ -118,12 +116,12 @@ img.full-width {
     }
 
     @media (max-width: @screen-xs-max) {
-        .sectionTitle {
+        .section-title {
             font-size: 3.5em;
         }
     }
 
-    .sectionSubtitle {
+    .section-subtitle {
         font-size: 2em;
         text-align: center;
         color: @secondaryColor;
@@ -154,23 +152,32 @@ img.full-width {
         font-size: 4em;
     }
 
-    @media (max-width: @screen-xs-max) {
-        .welcome1 {
-            font-size: 3.5em;
-        }
-    }
-
     .welcome2, .welcome3 {
         font-size: 3em;
     }
+
+    @media (max-width: @screen-xs-max) {
+        .welcome1, .welcome2, .welcome3 {
+            font-size: 2em;
+        }
+        border-bottom: 5px solid #FFF;
+    }
+
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+        border-bottom: 10px solid #FFF;
+    }
+
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+        border-bottom: 12px solid #FFF;
+    }
 }
 
-.ourStory {
+.our-story {
     background-color: @primaryBackgroundColor;
     .story {
         margin-bottom: 30px;
 
-        .hisStory, .herStory {
+        .his-story, .her-story {
             padding: 5px;
 
             img {
@@ -185,7 +192,7 @@ img.full-width {
             }
         }
 
-        .hisStory {
+        .his-story {
             img {
                 float: left;
             }
@@ -194,7 +201,7 @@ img.full-width {
             }
         }
 
-        .herStory {
+        .her-story {
             img {
                 float: right;
             }
@@ -205,7 +212,7 @@ img.full-width {
     }
 }
 
-.theWedding {
+.the-wedding {
     background-color: @secondaryBackgroundColor;
     text-align: center;
 
@@ -219,13 +226,9 @@ img.full-width {
         font-size: 1.5em;
         font-family: @secondary-font-family;
     }
-
-    .address {
-        // color: @tertiaryColor;
-    }
 }
 
-.weddingParty {
+.wedding-party {
     background-color: @primaryBackgroundColor;
 
     .groomsman, .bridesmaid {
@@ -266,7 +269,7 @@ img.full-width {
     }
 }
 
-.outOfTowners {
+.out-of-towners {
     background-color: @primaryBackgroundColor;
     text-align: center;
 
@@ -296,11 +299,11 @@ img.full-width {
             }
             .distance {
                 font-size: 1.25em;
-                // color: @tertiaryColor;
+                font-size: 1.1em;
             }
             .directions {
                 font-size: 1.25em;
-                // color: @tertiaryColor;
+                font-size: 1.1em;
             }
         }
     }
@@ -314,16 +317,13 @@ img.full-width {
                 // font-family: @secondary-font-family;
             }
             .address {
-                font-size: 1.25em;
-                // color: @tertiaryColor;
+                font-size: 1.1em;
             }
             .phone {
-                font-size: 1.25em;
-                // color: @tertiaryColor;
+                font-size: 1.1em;
             }
-            .website {
-                font-size: 1.25em;
-                // color: @tertiaryColor;
+            .distance {
+                font-size: 1.1em;
             }
         }
     }
@@ -338,6 +338,7 @@ img.full-width {
             }
             .venue {
                 font-size: 1.25em;
+                font-size: 1.1em;
                 // font-family: @secondary-font-family;
 
                 .cost {
@@ -356,8 +357,7 @@ img.full-width {
                 // font-family: @secondary-font-family;
             }
             .info {
-                font-size: 1.25em;
-                // color: @tertiaryColor;
+                font-size: 1.1em;
             }
         }
         .more-ideas {
@@ -382,12 +382,52 @@ img.full-width {
     padding-bottom: 0px;
 
     .carousel {
+        .carousel-indicators {
+            left: 35%;
+            width: 90%;
+        }
+
         .carousel-inner {
             .item {
                 img {
                     margin-left: auto;
                     margin-right: auto;
                 }
+            }
+        }
+
+        .carousel-control .glyphicon-menu-left,
+        .carousel-control .glyphicon-menu-right {
+            position: absolute;
+            top: 50%;
+            z-index: 5;
+            display: inline-block;
+            margin-top: -10px;
+            font-size: 30px;
+            margin-top: -15px;
+        }
+        .carousel-control .glyphicon-menu-left {
+            left: 50%;
+            margin-left: -10px;
+        }
+        .carousel-control .glyphicon-menu-right {
+            right: 50%;
+            margin-right: -10px;
+        }
+
+        @media screen and (min-width: @screen-sm-min) {
+            .carousel-control .glyphicon-menu-left,
+            .carousel-control .glyphicon-menu-right {
+                font-size: 60px;
+                width: 60px;
+                height: 60px;
+                margin-top: -30px;
+            }
+            .carousel-control .glyphicon-menu-left {
+                margin-left: -15px;
+            }
+            .carousel-control .glyphicon-menu-right {
+                margin-right: -15px;
             }
         }
     }
