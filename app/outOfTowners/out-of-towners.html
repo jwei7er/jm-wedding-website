@@ -16,13 +16,18 @@
 
         <div class="category rest-your-head">
             <div class="section-subtitle">Rest Your Head</div>
-            <p>We encourage our guests to make reservations early because there are multiple events going on the weekend of our wedding. We are working on getting reduced hotel rates and will continue to add more details here. One option to consider is booking with Airbnb or VRBO. Here are also some hotels to consider.</p>
+            <p>We encourage our guests to make reservations early because there are multiple events (football game, move-in weekend at UO) going on the weekend of our wedding. We have a limited number of blocked rooms at two different hotels. Another option to consider is booking a house with Airbnb or VRBO.</p>
             <div class="row">
-                <div class="col-sm-6 col-md-4 hotel" ng-repeat="hotel in hotels">
+                <div class="col-sm-6 hotel" ng-repeat="hotel in hotels">
                     <div class="name"><a href="{{hotel.website}}" target="_blank">{{hotel.name}}</a></div>
-                    <div class="address">{{hotel.address}}</div>
-                    <div class="phone">{{hotel.phone}}</div>
-                    <div class="distance"><span>{{hotel.distance}}</span></div>
+                    <div class="address details">{{hotel.address}}</div>
+                    <div class="phone details">{{hotel.phone}}</div>
+                    <div class="room-dates details">{{hotel.dates}}</div>
+                    <div class="room-information details">{{hotel.roomInformation}}</div>
+                    <div class="distance details">{{hotel.distance}}</div>
+                    <div class="directions details"><a href="{{hotel.directions}}" target="_blank">Directions</a></div>
+                    <div class="booking-instructions details">{{hotel.bookingInstructions}}</div>
+                    <div class="booking-notes details">{{hotel.bookingNotes}}</div>
                 </div>
             </div>
         </div>

@@ -1,11 +1,14 @@
-@mintColor: #C1EDCC;
 @lightGray: #DBDBDB;
 @darkGray: #797270;
 @dimGray: #696969;
 @slateGray: #708090;
 @darkSlateGray: #2F4F4F;
 
-@grayBlue: #a1c0ce;
+@mintColor: #C1EDCC;
+@grayGreenColor: #6B866B;
+
+@navyBlue: #2D5E88;
+@grayBlue: #A1C0CE;
 @grayBlueDark: #3b6070;
 
 @primaryBackgroundColor: @lightGray;
@@ -25,6 +28,10 @@
 @screen-md-max: 1199px;
 @screen-lg-min: 1200px;
 
+.boldFont() {
+    font-weight: 700;
+}
+
 html {
     font-size: 14px;
 }
@@ -34,6 +41,10 @@ body {
     background-color: @primaryBackgroundColor;
     font-family: @base-font-family;
     font-size: 1em;
+}
+
+a {
+    color: @navyBlue;
 }
 
 .jumbotron {
@@ -50,9 +61,6 @@ body {
         a:hover, a:visited, a:focus {
             text-decoration: none;
         }
-    }
-    .navbar-collapse {
-        // font-family: @secondary-font-family;
     }
 }
 
@@ -253,6 +261,7 @@ img.full-width {
                     font-size: 2em;
                     font-family: @font-section-subtitle;
                 }
+
                 .title {
                     font-size: 1.5em;
                     font-family: cursive;
@@ -297,12 +306,12 @@ img.full-width {
                 font-size: 1.5em;
                 // font-family: @secondary-font-family;
             }
+
             .distance {
-                font-size: 1.25em;
                 font-size: 1.1em;
             }
+
             .directions {
-                font-size: 1.25em;
                 font-size: 1.1em;
             }
         }
@@ -310,20 +319,25 @@ img.full-width {
 
     .rest-your-head {
         .hotel {
+            margin-top: 15px;
             margin-bottom: 15px;
             text-align: center;
+
             .name {
                 font-size: 1.5em;
-                // font-family: @secondary-font-family;
             }
-            .address {
+
+            .details {
                 font-size: 1.1em;
             }
-            .phone {
-                font-size: 1.1em;
+
+            .booking-instructions {
+                margin-top: 1em;
+                .boldFont();
             }
-            .distance {
-                font-size: 1.1em;
+
+            .booking-notes {
+                .boldFont();
             }
         }
     }
@@ -331,19 +345,20 @@ img.full-width {
     .eat-drink-local {
         .food {
             margin-bottom: 15px;
+
             .food-category {
                 font-size: 1.5em;
                 color: @secondaryColor;
                 font-family: @font-section-subtitle;
             }
+
             .venue {
                 font-size: 1.25em;
                 font-size: 1.1em;
-                // font-family: @secondary-font-family;
 
                 .cost {
-                    color: green;
-                    font-weight: 700;
+                    color: @grayGreenColor;
+                    .boldFont();
                 }
             }
         }
@@ -352,18 +367,19 @@ img.full-width {
     .explore-eugene-oregon {
         .explore {
             margin-bottom: 15px;
+
             .idea {
                 font-size: 1.5em;
-                // font-family: @secondary-font-family;
             }
+
             .info {
                 font-size: 1.1em;
             }
         }
+
         .more-ideas {
             text-align: center;
             font-size: 1.5em;
-            // font-family: @secondary-font-family;
         }
     }
 
@@ -406,10 +422,12 @@ img.full-width {
             font-size: 30px;
             margin-top: -15px;
         }
+
         .carousel-control .glyphicon-menu-left {
             left: 50%;
             margin-left: -10px;
         }
+
         .carousel-control .glyphicon-menu-right {
             right: 50%;
             margin-right: -10px;
@@ -423,9 +441,11 @@ img.full-width {
                 height: 60px;
                 margin-top: -30px;
             }
+
             .carousel-control .glyphicon-menu-left {
                 margin-left: -15px;
             }
+
             .carousel-control .glyphicon-menu-right {
                 margin-right: -15px;
             }
