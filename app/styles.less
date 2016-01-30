@@ -395,6 +395,41 @@ img.full-width {
                 }
             }
         }
+
+        .carousel-control .glyphicon-menu-left,
+        .carousel-control .glyphicon-menu-right {
+            position: absolute;
+            top: 50%;
+            z-index: 5;
+            display: inline-block;
+            margin-top: -10px;
+            font-size: 30px;
+            margin-top: -15px;
+        }
+        .carousel-control .glyphicon-menu-left {
+            left: 50%;
+            margin-left: -10px;
+        }
+        .carousel-control .glyphicon-menu-right {
+            right: 50%;
+            margin-right: -10px;
+        }
+
+        @media screen and (min-width: @screen-sm-min) {
+            .carousel-control .glyphicon-menu-left,
+            .carousel-control .glyphicon-menu-right {
+                font-size: 60px;
+                width: 60px;
+                height: 60px;
+                margin-top: -30px;
+            }
+            .carousel-control .glyphicon-menu-left {
+                margin-left: -15px;
+            }
+            .carousel-control .glyphicon-menu-right {
+                margin-right: -15px;
+            }
+        }
     }
 }
 
