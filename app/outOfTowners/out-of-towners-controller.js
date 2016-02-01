@@ -22,7 +22,7 @@ angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
                 website: "http://www.valleyriverinn.com",
                 distance: "10.3 miles | 16 minute drive",
                 directions: "https://goo.gl/maps/GRvgYMm2bQ82",
-                roomInformation: "Deluxe room for $259",
+                roomInformation: "15% off normal rates",
                 dates: "Wednesday, Sept 21 - Monday, Sept 26",
                 bookingInstructions: "Call to reserve.",
                 bookingNotes: "Mention \"Megan Coble Wedding Guest Rooms\" to get the reduced rates. Book by Monday, August 22."
