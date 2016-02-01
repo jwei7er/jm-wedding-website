@@ -1,9 +1,10 @@
-<div id="outOfTowners" class="outOfTowners section jumbotron">
+<div id="outOfTowners" class="out-of-towners section jumbotron">
     <img src="img/eugene-map.svg" alt="Eugene, OR" class="full-width" />
     <div class="container">
-        <div class="sectionTitle">Out of Towners</div>
+        <div class="section-title">Out of Towners</div>
+
         <div class="category how-to-get-here">
-            <div class="sectionSubtitle">How To Get Here</div>
+            <div class="section-subtitle">How To Get Here</div>
             <div class="row">
                 <div class="col-sm-6 airport" ng-repeat="airport in airports">
                     <div class="name"><a href="{{airport.website}}" target="_blank">{{airport.name}}</a></div>
@@ -14,26 +15,31 @@
         </div>
 
         <div class="category rest-your-head">
-            <div class="sectionSubtitle">Rest Your Head</div>
-            <p>We encourage our guests to make reservations early because there are multiple events going on the weekend of our wedding. We are working on getting reduced hotel rates and will continue to add more details here. One option to consider is booking with Airbnb or VRBO. Here are also some hotels to consider.</p>
+            <div class="section-subtitle">Rest Your Head</div>
+            <p>We encourage our guests to make reservations early because there are multiple events (football game, move-in weekend at UO) going on the weekend of our wedding. We have a limited number of blocked rooms at two different hotels. Another option to consider is booking a house with Airbnb or VRBO.</p>
             <div class="row">
-                <div class="col-sm-6 col-md-4 hotel" ng-repeat="hotel in hotels">
+                <div class="col-sm-6 hotel" ng-repeat="hotel in hotels">
                     <div class="name"><a href="{{hotel.website}}" target="_blank">{{hotel.name}}</a></div>
-                    <div class="address">{{hotel.address}}</div>
-                    <div class="phone">{{hotel.phone}}</div>
-                    <div class="distance"><span>{{hotel.distance}}</span></div>
+                    <div class="address details">{{hotel.address}}</div>
+                    <div class="phone details">{{hotel.phone}}</div>
+                    <div class="room-dates details">{{hotel.dates}}</div>
+                    <div class="room-information details">{{hotel.roomInformation}}</div>
+                    <div class="distance details">{{hotel.distance}}</div>
+                    <div class="directions details"><a href="{{hotel.directions}}" target="_blank">Directions</a></div>
+                    <div class="booking-instructions details">{{hotel.bookingInstructions}}</div>
+                    <div class="booking-notes details">{{hotel.bookingNotes}}</div>
                 </div>
             </div>
         </div>
 
         <div class="category eat-drink-local">
-            <div class="sectionSubtitle">Eat/Drink Local!</div>
+            <div class="section-subtitle">Eat/Drink Local</div>
             <p>These are some of our favorite places to grab a bite to eat and a pint to drink.</p>
             <div class="row">
                 <div class="col-sm-6 col-md-3 food" ng-repeat="foodCategory in foodCategories">
                     <div class="food-category">{{foodCategory.category}}</div>
                     <div class="venue" ng-repeat="venue in foodCategory.venues">
-                        <span class="name">{{venue.name}}</span>
+                        <span class="name"><a href="{{venue.website}}" target="_blank">{{venue.name}}</a></span>
                         <span ng-if="venue.cost">(<span class="cost">{{venue.cost}}</span>)</span>
                     </div>
                 </div>
@@ -41,7 +47,7 @@
         </div>
 
         <div class="category explore-eugene-oregon">
-            <div class="sectionSubtitle">Explore Eugene/Oregon</div>
+            <div class="section-subtitle">Explore Eugene/Oregon</div>
             <p>If you are in town for a few extra days, there are plenty of activities to keep you busy.</p>
             <div class="row">
                 <div class="col-sm-6 col-md-4 explore" ng-repeat="explore in exploreIdeas">

@@ -4,13 +4,13 @@ angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
             {
                 name: "Eugene Airport (EUG)",
                 website: "http://flyeug.com",
-                distance: "19 miles | 30 minute drive",
-                directions: "https://www.google.com/maps/dir/Eugene+Airport,+Douglas+Drive,+Eugene,+OR/Mount+Pisgah+Arboretum,+Frank+Parrish+Road,+Eugene,+OR/@44.0644773,-123.1684852,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x54c102dec4db7dd1:0xf6acae00aa866d93!2m2!1d-123.2159003!2d44.1217811!1m5!1m1!1s0x54c0dfeaf5bb2711:0x714799a0f1538344!2m2!1d-122.9807488!2d44.0069736?hl=en"
+                distance: "18.7 miles | 30 minute drive",
+                directions: "https://goo.gl/maps/64eaLhiKo3K2"
             }, {
                 name: "Portland International Airport (PDX)",
                 website: "http://flypdx.com/pdx",
-                distance: "126 miles | 2 hours 10 minute drive",
-                directions: "https://www.google.com/maps/dir/Portland+International+Airport,+Northeast+Airport+Way,+Portland,+OR/Mount+Pisgah+Arboretum,+Frank+Parrish+Road,+Eugene,+OR/@44.7948083,-123.9311777,8z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x5495a0aa74dc20d1:0x5bda7693380e5c3d!2m2!1d-122.5950942!2d45.5897694!1m5!1m1!1s0x54c0dfeaf5bb2711:0x714799a0f1538344!2m2!1d-122.9807488!2d44.0069736?hl=en"
+                distance: "126 miles | 2 hour 10 minute drive",
+                directions: "https://goo.gl/maps/3cwAqGRxcZ42"
             }
         ];
 
@@ -18,33 +18,25 @@ angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
             {
                 name: "Valley River Inn",
                 address: "1000 Valley River Way, Eugene, OR 97401",
-                phone: "(541) 743-1000",
-                website: "http://www.valleyriverinn.com/",
-                distance: "10.0 miles from venue"
+                phone: "(541) 743-1000 or (800) 543-8266",
+                website: "http://www.valleyriverinn.com",
+                distance: "10.3 miles | 16 minute drive",
+                directions: "https://goo.gl/maps/GRvgYMm2bQ82",
+                roomInformation: "15% off normal rates",
+                dates: "Wednesday, Sept 21 - Monday, Sept 26",
+                bookingInstructions: "Call to reserve.",
+                bookingNotes: "Mention \"Megan Coble Wedding Guest Rooms\" to get the reduced rates. Book by Monday, August 22."
             }, {
-                name: "Hilton Garden Inn",
-                address: "3528 Gateway St, Springfield, OR 97477",
-                phone: "(541) 736-3000",
-                website: "http://hiltongardeninn3.hilton.com/en/hotels/oregon/hilton-garden-inn-eugene-springfield-EUGORGI/index.html",
-                distance: "8.4 miles from venue"
-            }, {
-                name: "Comfort Suites",
-                address: "3060 E 25th Ave, Eugene, OR 97403",
-                phone: "(541) 343-7000",
-                website: "https://www.choicehotels.com/oregon/eugene/comfort-suites-hotels/or163",
-                distance: "5.3 miles from venue"
-            }, {
-                name: "Inn at the 5th",
-                address: "205 E 6th Ave, Eugene, OR 97401",
-                phone: "(541) 743-4099",
-                website: "http://www.innat5th.com/",
-                distance: "7.9 miles from venue"
-            }, {
-                name: "Courtyard Marriott",
-                address: "3443 Hutton St, Springfield, OR 97477",
-                phone: "(541) 726-2121",
-                website: "http://www.marriott.com/hotels/travel/eugcy-courtyard-eugene-springfield/",
-                distance: "8.3 miles from venue"
+                name: "Comfort Suites (in Creswell)",
+                address: "247 Melton Rd, Creswell, OR 97426",
+                phone: "(541) 895-4025 or (541) 895-4081",
+                website: "https://www.choicehotels.com/oregon/creswell/comfort-inn-hotels/or203",
+                distance: "9.7 miles | 12 min drive",
+                directions: "https://goo.gl/maps/4zWd3kkUf7D2",
+                roomInformation: "King Bed for $139, Two Queens for $159",
+                dates: "Friday, Sept 23 - Sunday, Sept 25",
+                bookingInstructions: "Call to reserve.",
+                bookingNotes: "Mention \"Weiler-Coble Wedding Party\" to get the reduced rates. Book by Friday, September 16."
             }
         ];
 
@@ -52,42 +44,42 @@ angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
             {
                 category: "Breakfast",
                 venues: [
-                    { name: "Off the Waffle", cost: "$" },
-                    { name: "New Day Bakery", cost: "$" },
-                    { name: "Morning Glory", cost: "$$" },
-                    { name: "Agate Alley Bistro", cost: "$$" },
-                    { name: "Voodoo Doughnuts", cost: "$" }
+                    { name: "Off the Waffle", website: "http://offthewaffle.com", cost: "$" },
+                    { name: "New Day Bakery", website: "http://newdaybakery.net", cost: "$" },
+                    { name: "Morning Glory (Vegetarian)", website: "http://www.morninggloryeugene.com", cost: "$$" },
+                    { name: "Agate Alley Bistro", website: "http://www.agatealley.com", cost: "$$" },
+                    { name: "Voodoo Doughnuts", website: "http://voodoodoughnut.com", cost: "$" }
                 ]
             }, {
                 category: "Lunch",
                 venues: [
-                    { name: "Bahn Mi", cost: "$" },
-                    { name: "Laughing Planet", cost: "$" },
-                    { name: "Falling Sky Delicatessen", cost: "$$" },
-                    { name: "Bier Stein", cost: "$$" },
-                    { name: "Cornucopia", cost: "$$" },
-                    { name: "Mucho Gusto", cost: "$" },
+                    { name: "Bon Mi", website: "http://bonmieugene.com", cost: "$" },
+                    { name: "Laughing Planet", website: "http://laughingplanetcafe.com/home", cost: "$" },
+                    { name: "Falling Sky Delicatessen", website: "https://fallingskybrewing.com/falling-sky-brewing-deli-menu.html", cost: "$$" },
+                    { name: "Bier Stein", website: "http://thebierstein.com", cost: "$$" },
+                    { name: "Cornucopia", website: "http://www.cornucopiaeugene.com", cost: "$$" },
+                    { name: "Mucho Gusto", website: "http://www.westrauntconcepts.com/welcome-mg.html", cost: "$" }
                 ]
             }, {
                 category: "Dinner",
                 venues: [
-                    { name: "Noli", cost: "$$" },
-                    { name: "Sabai", cost: "$$" },
-                    { name: "Tacovore", cost: "$" },
-                    { name: "Pizza Research Institute", cost: "$$" },
-                    { name: "Belly Taqueria", cost: "$$" },
-                    { name: "Sushi Pure", cost: "$$" },
-                    { name: "Marche", cost: "$$$" },
+                    { name: "Noli", website: "http://www.noliitaliancafe.com", cost: "$$" },
+                    { name: "Sabai", website: "http://www.sabaicafe.com", cost: "$$" },
+                    { name: "Tacovore", website: "http://tacovorepnw.com", cost: "$" },
+                    { name: "Pizza Research Institute", website: "http://www.pizzaresearchinstitute.com", cost: "$$" },
+                    { name: "Belly Taqueria", website: "http://www.bellytaqueria.com", cost: "$$" },
+                    { name: "Sushi Pure", website: "http://www.sushipureeugene.com", cost: "$$" },
+                    { name: "Marche", website: "http://marcherestaurant.com", cost: "$$$" }
                 ]
             }, {
                 category: "Drinks/Dessert",
                 venues: [
-                    { name: "Bier Stein" },
-                    { name: "Ninkasi" },
-                    { name: "Oakshire" },
-                    { name: "Rye" },
-                    { name: "Izakaya Meiji" },
-                    { name: "Sweet Life Patisserie" },
+                    { name: "Bier Stein", website: "http://thebierstein.com", cost: "$$" },
+                    { name: "Izakaya Meiji", website: "http://izakayameiji.com", cost: "$$" },
+                    { name: "Ninkasi", website: "http://www.ninkasibrewing.com/visit/tasting-room", cost: "$" },
+                    { name: "Oakshire", website: "http://oakbrew.com/brewery/public-house", cost: "$" },
+                    { name: "Rye", website: "http://ryeon3rd.com", cost: "$$" },
+                    { name: "Sweet Life Patisserie", website: "http://sweetlifedesserts.com", cost: "$" }
                 ]
             }
         ];
@@ -97,14 +89,14 @@ angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
                 idea: "Go on a Hike",
                 info: "Spencer's Butte, Mt Pisgah, Hobbit Trail"
             }, {
+                idea: "Go Wine Tasting",
+                info: "Sarver, Noble, Sweet Cheeks, & more"
+            }, {
                 idea: "Visit Covered Bridges",
                 info: "19 are located in our county"
             }, {
                 idea: "Visit the Coast",
                 info: "Florence, Newport, Thor's Well"
-            }, {
-                idea: "Go Wine Tasting",
-                info: "Sarver, Noble, Sweet Cheeks, & more"
             }, {
                 idea: "Visit Portland",
                 info: "2 hour drive north"
