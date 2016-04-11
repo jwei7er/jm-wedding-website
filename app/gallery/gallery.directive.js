@@ -9,6 +9,8 @@
         var directive = {
             restrict: 'EA',
             scope: {},
+            controller: 'GalleryController',
+            controllerAs: 'vm',
             templateUrl: 'app/gallery/gallery.html'
         };
         return directive;
