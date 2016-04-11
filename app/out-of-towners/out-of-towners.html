@@ -6,7 +6,7 @@
         <div class="category how-to-get-here">
             <div class="section-subtitle">How To Get Here</div>
             <div class="row">
-                <div class="col-sm-6 airport" ng-repeat="airport in airports">
+                <div class="col-sm-6 airport" ng-repeat="airport in vm.airports">
                     <div class="name"><a href="{{airport.website}}" target="_blank">{{airport.name}}</a></div>
                     <div class="distance">{{airport.distance}}</div>
                     <div class="directions"><a href="{{airport.directions}}" target="_blank">Directions</a></div>
@@ -18,7 +18,7 @@
             <div class="section-subtitle">Rest Your Head</div>
             <p>We encourage our guests to make reservations early because there are multiple events (football game, move-in weekend at UO) going on the weekend of our wedding. We have a limited number of blocked rooms at two different hotels. Another option to consider is booking a house with Airbnb or VRBO.</p>
             <div class="row">
-                <div class="col-sm-6 hotel" ng-repeat="hotel in hotels">
+                <div class="col-sm-6 hotel" ng-repeat="hotel in vm.hotels">
                     <div class="name"><a href="{{hotel.website}}" target="_blank">{{hotel.name}}</a></div>
                     <div class="address details">{{hotel.address}}</div>
                     <div class="phone details">{{hotel.phone}}</div>
@@ -36,7 +36,7 @@
             <div class="section-subtitle">Eat/Drink Local</div>
             <p>These are some of our favorite places to grab a bite to eat and a pint to drink.</p>
             <div class="row">
-                <div class="col-sm-6 col-md-3 food" ng-repeat="foodCategory in foodCategories">
+                <div class="col-sm-6 col-md-3 food" ng-repeat="foodCategory in vm.foodCategories">
                     <div class="food-category">{{foodCategory.category}}</div>
                     <div class="venue" ng-repeat="venue in foodCategory.venues">
                         <span class="name"><a href="{{venue.website}}" target="_blank">{{venue.name}}</a></span>
@@ -50,7 +50,7 @@
             <div class="section-subtitle">Explore Eugene/Oregon</div>
             <p>If you are in town for a few extra days, there are plenty of activities to keep you busy.</p>
             <div class="row">
-                <div class="col-sm-6 col-md-4 explore" ng-repeat="explore in exploreIdeas">
+                <div class="col-sm-6 col-md-4 explore" ng-repeat="explore in vm.exploreIdeas">
                     <div class="idea">{{explore.idea}}</div>
                     <div class="info">{{explore.info}}</div>
                 </div>
