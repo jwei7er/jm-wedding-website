@@ -1,4 +1,6 @@
 angular.module('myApp').directive('weddingParty', function() {
+    "use strict";
+
     return {
         restrict: "E",
         replace: true,

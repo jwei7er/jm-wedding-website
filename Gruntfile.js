@@ -1,4 +1,14 @@
+'use strict';
+
 module.exports = function(grunt) {
+
+  grunt.loadNpmTasks('grunt-angular-templates');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Project configuration.
   grunt.initConfig({
@@ -44,12 +54,24 @@ module.exports = function(grunt) {
           }, {
             expand: true,
             src: [
-              'lib/bootstrap/dist/fonts/*',
+              'lib/bootstrap/dist/fonts/*'
             ],
             dest: 'build/fonts/',
             flatten: true
           }
         ]
+      }
+    },
+    jshint: {
+      all: [
+        'Gruntfile.js',
+        'app/**/*.js'
+      ],
+      app: ['app/**/*.js'],
+      gruntfile: ['Gruntfile.js'],
+      options: {
+        jshintrc: '.jshintrc',
+        verbose: true
       }
     },
     less: {
@@ -60,41 +82,32 @@ module.exports = function(grunt) {
       }
     },
     ngtemplates:  {
-      myApp:        {
-        src:      ['app/**/*.html', '!app/index.html'],
-        dest:     'temp/templates.js'
+      myApp: {
+        src: ['app/**/*.html', '!app/index.html'],
+        dest: 'temp/templates.js'
       }
     },
     watch: {
       scripts: {
         files: ['app/**/*.js', 'app/**/*.html', 'app/**/*.less'],
-        tasks: ['default'],
+        tasks: ['build'],
         options: {
-          spawn: false,
-        },
-      },
+          spawn: false
+        }
+      }
     },
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       build: {
-        // src: 'src/<%= pkg.name %>.js',
         src: ['app/app.js', 'app/**/*.js', 'temp/templates.js'],
         dest: 'build/<%= pkg.name %>.min.js'
       }
     }
   });
 
-  grunt.loadNpmTasks('grunt-angular-templates');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-
-  grunt.registerTask('build', ['ngtemplates', 'uglify', 'less', 'copy']);
+  grunt.registerTask('build', ['jshint:all', 'ngtemplates', 'uglify', 'less', 'copy']);
 
   // Default task(s).
   grunt.registerTask('default', ['build']);

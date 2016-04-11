@@ -1,5 +1,7 @@
 angular.module('myApp').controller('OurStoryCtrl', ['$scope',
     function($scope) {
+        "use strict";
+
         $scope.stories = [
             {
                 title: "About Us",

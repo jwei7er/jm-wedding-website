@@ -1,5 +1,7 @@
 angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
     function($scope) {
+        "use strict";
+
         $scope.airports = [
             {
                 name: "Eugene Airport (EUG)",

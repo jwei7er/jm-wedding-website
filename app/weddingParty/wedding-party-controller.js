@@ -1,5 +1,7 @@
 angular.module('myApp').controller('WeddingPartyCtrl', ['$scope',
     function($scope) {
+        "use strict";
+
         $scope.bridesmaids = [
             {
                 name: "Mallory Queen",

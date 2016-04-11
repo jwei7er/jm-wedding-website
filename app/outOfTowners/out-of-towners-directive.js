@@ -1,4 +1,6 @@
 angular.module('myApp').directive('outOfTowners', function() {
+    "use strict";
+
     return {
         restrict: "E",
         replace: true,
