@@ -1,8 +1,14 @@
-angular.module('jmwwApp').controller('WeddingPartyCtrl', ['$scope',
-    function($scope) {
-        "use strict";
+(function() {
+    'use strict';
 
-        $scope.bridesmaids = [
+    angular
+        .module('jmwwApp')
+        .controller('WeddingPartyController', WeddingPartyController);
+
+    function WeddingPartyController() {
+        var vm = this;
+
+        vm.bridesmaids = [
             {
                 name: "Mallory Queen",
                 img: "img/mallory-profile.jpg",
@@ -26,7 +32,7 @@ angular.module('jmwwApp').controller('WeddingPartyCtrl', ['$scope',
             }
         ];
 
-        $scope.groomsmen = [
+        vm.groomsmen = [
             {
                 name: "Luke Weiler",
                 img: "img/luke-profile.jpg",
@@ -50,4 +56,4 @@ angular.module('jmwwApp').controller('WeddingPartyCtrl', ['$scope',
             }
         ];
     }
-]);
+})();
