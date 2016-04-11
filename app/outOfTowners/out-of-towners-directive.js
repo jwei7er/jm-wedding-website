@@ -1,4 +1,4 @@
-angular.module('myApp').directive('outOfTowners', function() {
+angular.module('jmwwApp').directive('outOfTowners', function() {
     "use strict";
 
     return {

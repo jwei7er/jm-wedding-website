@@ -1,4 +1,4 @@
-angular.module('myApp').controller('WeddingPartyCtrl', ['$scope',
+angular.module('jmwwApp').controller('WeddingPartyCtrl', ['$scope',
     function($scope) {
         "use strict";
 

@@ -1,4 +1,4 @@
-angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
+angular.module('jmwwApp').controller('OutOfTownersCtrl', ['$scope',
     function($scope) {
         "use strict";
 

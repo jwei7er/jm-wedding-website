@@ -1,4 +1,4 @@
-angular.module('myApp').directive('ourStory', function() {
+angular.module('jmwwApp').directive('ourStory', function() {
     "use strict";
 
     return {

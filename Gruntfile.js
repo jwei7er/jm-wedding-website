@@ -2,6 +2,7 @@
 
 module.exports = function(grunt) {
 
+  // Load all NPM tasks to use later.
   grunt.loadNpmTasks('grunt-angular-templates');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -13,9 +14,13 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    banner: {
+      copyright: '(c) 2015-2016 Jordan Weiler'
+    },
     clean: {
-      build: ['temp/', 'build/'],
-      css: ['app/styles.css']
+      build: ['build/'],
+      css: ['app/styles.css'],
+      temp: ['temp/']
     },
     copy: {
       indexPage: {
@@ -82,7 +87,7 @@ module.exports = function(grunt) {
       }
     },
     ngtemplates:  {
-      myApp: {
+      jmwwApp: {
         src: ['app/**/*.html', '!app/index.html'],
         dest: 'temp/templates.js'
       }
@@ -98,16 +103,16 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        banner: '/*\n * <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %>\n * <%= banner.copyright %>\n */\n'
       },
       build: {
-        src: ['app/app.js', 'app/**/*.js', 'temp/templates.js'],
+        src: ['app/app.module.js', 'app/**/*.js', 'temp/templates.js'],
         dest: 'build/<%= pkg.name %>.min.js'
       }
     }
   });
 
-  grunt.registerTask('build', ['jshint:all', 'ngtemplates', 'uglify', 'less', 'copy']);
+  grunt.registerTask('build', ['jshint:all', 'ngtemplates', 'uglify', 'clean:temp', 'less', 'copy']);
 
   // Default task(s).
   grunt.registerTask('default', ['build']);

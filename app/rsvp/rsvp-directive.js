@@ -1,4 +1,4 @@
-angular.module('myApp').directive('rsvp', function() {
+angular.module('jmwwApp').directive('rsvp', function() {
     "use strict";
 
     return {

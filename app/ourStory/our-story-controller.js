@@ -1,4 +1,4 @@
-angular.module('myApp').controller('OurStoryCtrl', ['$scope',
+angular.module('jmwwApp').controller('OurStoryCtrl', ['$scope',
     function($scope) {
         "use strict";
 

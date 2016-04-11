@@ -1,4 +1,4 @@
-angular.module('myApp').directive('gallery', function() {
+angular.module('jmwwApp').directive('gallery', function() {
     "use strict";
 
     return {
