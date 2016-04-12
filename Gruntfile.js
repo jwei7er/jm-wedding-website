@@ -11,12 +11,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
+  // Default task
+  grunt.registerTask('default', ['build']);
+  grunt.registerTask('build', ['jshint:all', 'ngtemplates', 'uglify', 'clean:temp', 'less', 'copy']);
+
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    banner: {
-      copyright: '(c) 2015-2016 Jordan Weiler'
-    },
+    banner: '/*\n' +
+            ' * <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %>\n' +
+            ' * (c) 2015-2016 <%= pkg.author %>\n' +
+            ' */\n',
     clean: {
       build: ['build/'],
       css: ['app/styles.css'],
@@ -103,7 +108,7 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
-        banner: '/*\n * <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %>\n * <%= banner.copyright %>\n */\n'
+        banner: '<%= banner %>'
       },
       build: {
         src: ['app/app.module.js', 'app/**/*.js', 'temp/templates.js'],
@@ -111,10 +116,5 @@ module.exports = function(grunt) {
       }
     }
   });
-
-  grunt.registerTask('build', ['jshint:all', 'ngtemplates', 'uglify', 'clean:temp', 'less', 'copy']);
-
-  // Default task(s).
-  grunt.registerTask('default', ['build']);
 
 };

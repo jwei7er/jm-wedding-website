@@ -1,5 +1,6 @@
 {
   "name": "jm-wedding-website",
+  "author": "Jordan Weiler",
   "version": "0.0.0",
   "description": "An AngularJS website for my wedding",
   "repository": "https://github.com/jwei7er/jm-wedding-website",
