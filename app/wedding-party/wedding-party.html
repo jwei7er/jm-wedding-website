@@ -2,7 +2,7 @@
     <div class="container">
         <div class="section-title">Wedding Party</div>
         <div class="col-md-6">
-            <div class="bridesmaid" ng-repeat="maid in bridesmaids">
+            <div class="bridesmaid" ng-repeat="maid in vm.bridesmaids">
                 <div class="header">
                     <img ng-src="{{maid.img}}" alt="" />
                     <div class="name-container">
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="groomsman" ng-repeat="man in groomsmen">
+            <div class="groomsman" ng-repeat="man in vm.groomsmen">
                 <div class="header">
                     <img ng-src="{{man.img}}" alt="" />
                     <div class="name-container">

@@ -1,6 +1,14 @@
-angular.module('myApp').controller('OurStoryCtrl', ['$scope',
-    function($scope) {
-        $scope.stories = [
+(function() {
+    'use strict';
+
+    angular
+        .module('jmwwApp')
+        .controller('OurStoryController', OurStoryController);
+
+    function OurStoryController() {
+        var vm = this;
+
+        vm.stories = [
             {
                 title: "About Us",
                 his: "I was born in Michigan, but lived in Asia (the Philippines) and Europe (Moldova) during my childhood. My family moved back to the U.S. for good when I was in the 5th grade. I attended the University of Arkansas (Go Hogs!) and received my B.S. in Computer Science in 2008. I worked for four years and then decided I wanted to further my education. I applied to four grad schools, with the University of Oregon being the last one. After visiting the UO, I fell in love with the area and really felt like I belonged in the Northwest. After spending all my saved money on a 30 day trip across the Middle East, Europe, and Northern Africa with my groomsman Chris, I packed up all my belongings and drove a moving truck 2,000+ miles from Fort Smith, Arkansas to Eugene, Oregon in August 2012. I had my first date with Megan two days before my grad school classes would begin. I graduated with my M.S. in Computer and Information Science from the University of Oregon (Go Ducks!) in 2014 and have been working in Eugene as a Web Developer since. Because of my unique childhood, I have always had a passion for traveling. I also love triathlons, hiking, skiing, movies, and photography.",
@@ -20,4 +28,4 @@ angular.module('myApp').controller('OurStoryCtrl', ['$scope',
             }
         ];
     }
-]);
+})();

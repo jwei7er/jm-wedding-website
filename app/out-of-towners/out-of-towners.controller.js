@@ -1,6 +1,14 @@
-angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
-    function($scope) {
-        $scope.airports = [
+(function() {
+    'use strict';
+
+    angular
+        .module('jmwwApp')
+        .controller('OutOfTownersController', OutOfTownersController);
+
+    function OutOfTownersController() {
+        var vm = this;
+
+        vm.airports = [
             {
                 name: "Eugene Airport (EUG)",
                 website: "http://flyeug.com",
@@ -14,7 +22,7 @@ angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
             }
         ];
 
-        $scope.hotels = [
+        vm.hotels = [
             {
                 name: "Valley River Inn",
                 address: "1000 Valley River Way, Eugene, OR 97401",
@@ -40,7 +48,7 @@ angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
             }
         ];
 
-        $scope.foodCategories = [
+        vm.foodCategories = [
             {
                 category: "Breakfast",
                 venues: [
@@ -84,7 +92,7 @@ angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
             }
         ];
 
-        $scope.exploreIdeas = [
+        vm.exploreIdeas = [
             {
                 idea: "Go on a Hike",
                 info: "Spencer's Butte, Mt Pisgah, Hobbit Trail"
@@ -106,4 +114,4 @@ angular.module('myApp').controller('OutOfTownersCtrl', ['$scope',
             }
         ];
     }
-]);
+})();
