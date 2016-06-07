@@ -3,20 +3,6 @@ require 'PHPMailerAutoload.php';
 
 include('credentials.php');
 
-$mail = new PHPMailer;
-
-$mail->isSMTP();
-$mail->Host = 'smtp.mailgun.org';
-$mail->SMTPAuth = true;
-$mail->Username = $user_name;
-$mail->Password = $password;
-$mail->SMTPSecure = 'tls';
-$mail->Port = 587;
-$mail->setFrom('rsvp@weiblewedding.com', 'Weible Wedding RSVP');
-$mail->addAddress($rsvp_email);
-$mail->WordWrap = 80;
-$mail->Subject = 'Wedding RSVP';
-
 $input_data = json_decode(file_get_contents('php://input'));
 
 if (is_null($input_data)) {
@@ -30,7 +16,21 @@ if (is_null($input_data)) {
         header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
         echo json_encode(array('status' => 500, 'message' => "RSVP is required."));
     } else {
-        $data = "Name: " . $input_data->name . "\n";
+        $mail = new PHPMailer;
+
+        $mail->isSMTP();
+        $mail->Host = 'smtp.mailgun.org';
+        $mail->SMTPAuth = true;
+        $mail->Username = $user_name;
+        $mail->Password = $password;
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
+        $mail->setFrom('rsvp@weiblewedding.com', 'Weible Wedding RSVP');
+        $mail->addAddress($rsvp_email);
+        $mail->WordWrap = 80;
+        $mail->Subject = 'Wedding RSVP for ' . $input_data->name;
+
+        $data = "Name(s): " . $input_data->name . "\n";
         $data = $data . "RSVP: " . $input_data->rsvp . "\n";
         if (isset($input_data->email)) {
             $data = $data . "Email: " . $input_data->email . "\n";
