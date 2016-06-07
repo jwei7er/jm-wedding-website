@@ -49,6 +49,10 @@ module.exports = function(grunt) {
         dest: 'build/img/',
         flatten: true
       },
+      scripts: {
+        src: 'scripts/**/*',
+        dest: 'build/'
+      },
       lib: {
         files: [
           {
@@ -67,6 +71,15 @@ module.exports = function(grunt) {
               'lib/bootstrap/dist/fonts/*'
             ],
             dest: 'build/fonts/',
+            flatten: true
+          }, {
+            expand: true,
+            src: [
+              'vendor/phpmailer/phpmailer/PHPMailerAutoload.php',
+              'vendor/phpmailer/phpmailer/class.phpmailer.php',
+              'vendor/phpmailer/phpmailer/class.smtp.php'
+            ],
+            dest: 'build/scripts/',
             flatten: true
           }
         ]
@@ -99,7 +112,7 @@ module.exports = function(grunt) {
     },
     watch: {
       scripts: {
-        files: ['app/**/*.js', 'app/**/*.html', 'app/**/*.less'],
+        files: ['app/**/*.js', 'app/**/*.html', 'app/**/*.less', 'scripts/**/*'],
         tasks: ['build'],
         options: {
           spawn: false

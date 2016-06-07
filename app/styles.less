@@ -487,6 +487,73 @@ img.full-width {
 
 .rsvp {
     background-color: @secondaryBackgroundColor;
+
+    .rsvp-deadline {
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 30px;
+    }
+
+    .rsvp-form {
+        text-align: center;
+        max-width: 500px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        fieldset {
+            min-width: 200px;
+            max-width: 500px;
+            width: 100%;
+
+            padding-bottom: 10px;
+
+            label {
+                display: block;
+                text-align: left;
+            }
+
+            .radio-label {
+                display: inline-block;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+
+            input[type="text"], input[type="email"], input[type="tel"] {
+                width: 100%;
+                padding: 10px;
+                border: solid 1px #dcdcdc;
+                transition: box-shadow 0.3s, border 0.3s;
+
+                &:focus, &.focus {
+                    border: solid 1px #707070;
+                    box-shadow: 0 0 5px 1px #969696;
+                }
+            }
+        }
+    }
+
+    .invalid-form-message {
+        width: 100%;
+        border: 1px solid red;
+        padding: 10px;
+        text-align: center;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #DBDBDB;
+    }
+
+    .successful-rsvp-message {
+        width: 100%;
+        border: 1px solid green;
+        padding: 10px;
+        text-align: center;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #DBDBDB;
+    }
 }
 
 footer {

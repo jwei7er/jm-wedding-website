@@ -15,3 +15,9 @@ temp/
 
 # CSS files within app
 *.css
+
+# PHP libraries
+vendor/
+
+# Mailgun PHP Account
+scripts/credentials.php
