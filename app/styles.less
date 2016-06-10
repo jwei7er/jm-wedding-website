@@ -196,29 +196,25 @@ img.full-width {
                 height: 64px;
                 width: auto;
                 border-radius: 32px;
+                float: left;
             }
 
             p {
                 font-size: 1.1em;
                 text-align: justify;
-            }
-        }
-
-        .his-story {
-            img {
-                float: left;
-            }
-            p {
                 margin-left: 80px;
             }
         }
 
-        .her-story {
-            img {
-                float: right;
-            }
-            p {
-                margin-right: 80px;
+        @media (min-width: @screen-md-min) {
+            .her-story {
+                img {
+                    float: right;
+                }
+                p {
+                    margin-right: 80px;
+                    margin-left: 0;
+                }
             }
         }
     }
