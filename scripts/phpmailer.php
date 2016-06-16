@@ -39,7 +39,10 @@ if (is_null($input_data)) {
             $data = $data . "Dietary Restrictions: " . $input_data->food . "\n";
         }
         if (isset($input_data->music)) {
-            $data = $data . "Music Request: " . $input_data->music;
+            $data = $data . "Song Request: " . $input_data->music . "\n";
+        }
+        if (isset($input_data->note)) {
+            $data = $data . "Message: " . $input_data->note;
         }
         $mail->Body = "RSVP Information" . "\n\n" . $data;
 

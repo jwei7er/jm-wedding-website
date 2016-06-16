@@ -32,10 +32,14 @@
                 <input type="text" ng-model="vm.musicRequest" />
             </fieldset>
             <fieldset class="form-group">
+                <label class="form-group-label">A note for the bride and groom</label>
+                <textarea ng-model="vm.note" rows="3"></textarea>
+            </fieldset>
+            <fieldset class="form-group">
                 <input type="button" class="btn btn-success" ng-click="vm.submit()" value="Send RSVP" />
             </fieldset>
         </form>
-        <div ng-if="vm.invalidMsg" class="invalid-form-message">{{vm.invalidMsg}}</div>
-        <div ng-if="vm.successMsg" class="successful-rsvp-message">{{vm.successMsg}}</div>
+        <div ng-if="vm.errorMsg" class="error-message">{{vm.errorMsg}}</div>
+        <div ng-if="vm.successMsg" class="success-message">{{vm.successMsg}}</div>
     </div>
 </div>

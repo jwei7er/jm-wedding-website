@@ -28,6 +28,8 @@
 @screen-md-max: 1199px;
 @screen-lg-min: 1200px;
 
+@rsvp-max-width: 500px;
+
 .boldFont() {
     font-weight: 700;
 }
@@ -497,16 +499,15 @@ img.full-width {
 
     .rsvp-form {
         text-align: center;
-        max-width: 500px;
+        max-width: @rsvp-max-width;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
 
         fieldset {
             min-width: 200px;
-            max-width: 500px;
+            max-width: @rsvp-max-width;
             width: 100%;
-
             padding-bottom: 10px;
 
             label {
@@ -520,7 +521,7 @@ img.full-width {
                 margin-left: 10px;
             }
 
-            input[type="text"], input[type="email"], input[type="tel"] {
+            input[type="text"], input[type="email"], textarea {
                 width: 100%;
                 padding: 10px;
                 border: solid 1px #dcdcdc;
@@ -534,26 +535,26 @@ img.full-width {
         }
     }
 
-    .invalid-form-message {
+    .error-message {
         width: 100%;
         border: 1px solid red;
         padding: 10px;
         text-align: center;
-        max-width: 500px;
+        max-width: @rsvp-max-width;
         margin-left: auto;
         margin-right: auto;
-        background-color: #DBDBDB;
+        background-color: @lightGray;
     }
 
-    .successful-rsvp-message {
+    .success-message {
         width: 100%;
         border: 1px solid green;
         padding: 10px;
         text-align: center;
-        max-width: 500px;
+        max-width: @rsvp-max-width;
         margin-left: auto;
         margin-right: auto;
-        background-color: #DBDBDB;
+        background-color: @lightGray;
     }
 }
 
