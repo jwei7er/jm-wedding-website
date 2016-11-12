@@ -28,6 +28,8 @@
 @screen-md-max: 1199px;
 @screen-lg-min: 1200px;
 
+@rsvp-max-width: 600px;
+
 .boldFont() {
     font-weight: 700;
 }
@@ -64,7 +66,7 @@ a {
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: @screen-sm-max) {
     .navbar-header {
         float: none;
     }
@@ -116,17 +118,11 @@ img.full-width {
 
 .section {
     .section-title {
-        font-size: 4em;
+        font-size: 3.5em;
         font-weight: 400;
         text-align: center;
         margin-bottom: 30px;
         font-family: @font-cursive-header;
-    }
-
-    @media (max-width: @screen-xs-max) {
-        .section-title {
-            font-size: 3.5em;
-        }
     }
 
     .section-subtitle {
@@ -139,12 +135,22 @@ img.full-width {
             margin-top: 15px;
         }
     }
+
+    @media (max-width: @screen-xs-max) {
+        .section-title {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 1.75em;
+        }
+    }
 }
 
 .welcome {
     background-color: @secondaryBackgroundColor;
     text-align: center;
-    border-bottom: 15px solid #FFF;
 
     &.jumbotron {
         padding-top: 0;
@@ -152,15 +158,16 @@ img.full-width {
         margin-bottom: 0;
     }
 
+    img.full-width + div.container {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
     .container {
         font-family: @font-cursive-header;
     }
 
-    .welcome1 {
-        font-size: 4em;
-    }
-
-    .welcome2, .welcome3 {
+    .welcome1, .welcome2, .welcome3 {
         font-size: 3em;
     }
 
@@ -172,15 +179,14 @@ img.full-width {
             margin-left: -15px;
             margin-right: -15px;
         }
-        border-bottom: 5px solid #FFF;
     }
 
-    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-        border-bottom: 10px solid #FFF;
-    }
-
-    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-        border-bottom: 12px solid #FFF;
+    @media (min-width: @screen-sm-min) {
+        .welcome1, .welcome2 {
+            display: inline-block;
+            margin-left: .1em;
+            margin-right: .1em;
+        }
     }
 }
 
@@ -196,29 +202,25 @@ img.full-width {
                 height: 64px;
                 width: auto;
                 border-radius: 32px;
+                float: left;
             }
 
             p {
                 font-size: 1.1em;
                 text-align: justify;
-            }
-        }
-
-        .his-story {
-            img {
-                float: left;
-            }
-            p {
                 margin-left: 80px;
             }
         }
 
-        .her-story {
-            img {
-                float: right;
-            }
-            p {
-                margin-right: 80px;
+        @media (min-width: @screen-md-min) {
+            .her-story {
+                img {
+                    float: right;
+                }
+                p {
+                    margin-right: 80px;
+                    margin-left: 0;
+                }
             }
         }
     }
@@ -234,9 +236,19 @@ img.full-width {
         margin-bottom: 0;
     }
 
-    .date, .title, .address {
+    .date, .time, .location, .address, .info {
         font-size: 1.5em;
         font-family: @secondary-font-family;
+    }
+
+    .time, .address {
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: @screen-xs-max) {
+        .date, .time, .location, .address, .info {
+            font-size: 1.2em;
+        }
     }
 }
 
@@ -255,11 +267,14 @@ img.full-width {
                 height: 150px;
                 border-radius: 100px;
                 margin-bottom: 20px;
+                margin-right: 10px;
+                margin-left: 10px;
             }
 
             .name-container {
                 display: inline-block;
-                margin-left: 20px;
+                margin-right: 10px;
+                margin-left: 10px;
 
                 .name {
                     font-size: 2em;
@@ -334,12 +349,13 @@ img.full-width {
             }
 
             .booking-instructions {
-                margin-top: 1em;
+                margin-top: 15px;
                 .boldFont();
             }
 
             .booking-notes {
                 .boldFont();
+                text-align: justify;
             }
         }
     }
@@ -487,10 +503,85 @@ img.full-width {
 
 .rsvp {
     background-color: @secondaryBackgroundColor;
+
+    &.jumbotron {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .rsvp-deadline {
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 30px;
+    }
+
+    .rsvp-form {
+        text-align: center;
+        max-width: @rsvp-max-width;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        fieldset {
+            min-width: 200px;
+            max-width: @rsvp-max-width;
+            width: 100%;
+            padding-bottom: 10px;
+
+            label {
+                display: block;
+                text-align: left;
+            }
+
+            .radio-label {
+                display: inline-block;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+
+            input[type="text"], input[type="email"], textarea {
+                width: 100%;
+                padding: 10px;
+                border: solid 1px #dcdcdc;
+                transition: box-shadow 0.3s, border 0.3s;
+
+                &:focus, &.focus {
+                    border: solid 1px #707070;
+                    box-shadow: 0 0 5px 1px #969696;
+                }
+            }
+        }
+    }
+
+    .error-message {
+        width: 100%;
+        border: 1px solid red;
+        padding: 10px;
+        text-align: center;
+        max-width: @rsvp-max-width;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: @lightGray;
+    }
+
+    .success-message {
+        width: 100%;
+        border: 1px solid green;
+        padding: 10px;
+        text-align: center;
+        max-width: @rsvp-max-width;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: @lightGray;
+    }
 }
 
 footer {
-    padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
+
+    img {
+        margin-bottom: 30px;
+    }
 }

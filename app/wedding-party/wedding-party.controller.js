@@ -47,12 +47,12 @@
                 name: "Chris Bryan",
                 img: "img/chris-profile.jpg",
                 title: "Groomsman",
-                story: "Chris and I first met wayyyyy back in elementary school. We didn't see each other again until our freshmen year at the UofA when we were neighbors in Pomfret Hall. We both majored in Computer Science, so we had most of the same classes together. Since graduating, we've taken several trips together. Whether it is Dallas, St. Louis, the Czech Republic, Oman, Morocco, Spain, France, or London, hanging out with Chris is always fun (except for that one time we almost got thrown off the train in Kutna Hora...). I'm glad that Chris had the idea to quit our jobs, travel overseas, and then go to grad school because it lead me to Oregon."
+                story: "Chris and I first met way back in elementary school. We didn't see each other again until our freshmen year at the UofA when we were neighbors in Pomfret Hall. We both majored in Computer Science, so we had most of the same classes together. Since graduating, we've taken several trips together. Whether it is Dallas, St. Louis, the Czech Republic, Oman, Morocco, Spain, France, or London, hanging out with Chris is always fun (except for that one time we almost got thrown off the train in Kutna Hora...). I'm glad that Chris had the idea to quit our jobs, travel overseas, and then go to grad school because it lead me to Oregon."
             }, {
                 name: "Jason Hardy",
                 img: "img/jason-profile.jpg",
                 title: "Groomsman",
-                story: "I first met Jason in high school, back when people knew him as Drew. We both ended up going to the University of Arkansas and majoring in Computer Science. Jason definitely helped me during some of those early programming classes, and I am forever thankful for that. One time, Jason ran through a crowd of sorority sisters just so that I could chase him in my lycra Spider-Man costume. We were also part of the \"Razorhogs\" and painted up for 19 straight Razorback football games."
+                story: "I first met Jason back in high school, when people still called him Drew. We both decided to enroll at the University of Arkansas and major in Computer Science so we had a lot of classes together. Jason definitely helped me during some of those early programming classes and I am forever thankful for that. One time, Jason ran through a crowd of sorority sisters just so that I could chase him in my lycra Spider-Man costume. We were also part of the \"Razorhogs\" and painted up for 19 straight Razorback football games. I've had a lot of great memories hanging out with Jason."
             }
         ];
     }
