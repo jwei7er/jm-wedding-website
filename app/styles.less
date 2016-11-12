@@ -28,8 +28,6 @@
 @screen-md-max: 1199px;
 @screen-lg-min: 1200px;
 
-@rsvp-max-width: 600px;
-
 .boldFont() {
     font-weight: 700;
 }
@@ -476,27 +474,14 @@ img.full-width {
     background-color: @primaryBackgroundColor;
 
     .message {
-        font-size: 1.1em;
+        font-size: 1.5em;
+        margin-bottom: 30px;
         text-align: justify;
     }
 
     @media (min-width: @screen-md-min) {
         .message {
             text-align: center;
-        }
-    }
-
-    .gift-registry {
-        text-align: center;
-
-        a {
-            img {
-                margin: 40px 20px;
-                max-width: 70%;
-                min-height: 30px;
-                max-height: 50px;
-                height: auto;
-            }
         }
     }
 }
@@ -511,69 +496,9 @@ img.full-width {
     }
 
     .rsvp-deadline {
-        text-align: center;
         font-size: 1.5em;
         margin-bottom: 30px;
-    }
-
-    .rsvp-form {
         text-align: center;
-        max-width: @rsvp-max-width;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-
-        fieldset {
-            min-width: 200px;
-            max-width: @rsvp-max-width;
-            width: 100%;
-            padding-bottom: 10px;
-
-            label {
-                display: block;
-                text-align: left;
-            }
-
-            .radio-label {
-                display: inline-block;
-                margin-right: 10px;
-                margin-left: 10px;
-            }
-
-            input[type="text"], input[type="email"], textarea {
-                width: 100%;
-                padding: 10px;
-                border: solid 1px #dcdcdc;
-                transition: box-shadow 0.3s, border 0.3s;
-
-                &:focus, &.focus {
-                    border: solid 1px #707070;
-                    box-shadow: 0 0 5px 1px #969696;
-                }
-            }
-        }
-    }
-
-    .error-message {
-        width: 100%;
-        border: 1px solid red;
-        padding: 10px;
-        text-align: center;
-        max-width: @rsvp-max-width;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: @lightGray;
-    }
-
-    .success-message {
-        width: 100%;
-        border: 1px solid green;
-        padding: 10px;
-        text-align: center;
-        max-width: @rsvp-max-width;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: @lightGray;
     }
 }
 
