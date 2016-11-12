@@ -1,12 +1,12 @@
 {
-  "name": "jm-wedding-website",
-  "version": "0.0.0",
-  "description": "An AngularJS website for my wedding",
-  "repository": "https://github.com/jwei7er/jm-wedding-website",
-  "license": "MIT",
-  "dependencies": {
-    "angular": "~1.4.0",
-    "jquery": ">= 1.9.1",
-    "bootstrap": "^3.3.5"
-  }
+    "name": "jm-wedding-website",
+    "version": "0.5.0",
+    "description": "An AngularJS website for my wedding",
+    "repository": "https://github.com/jwei7er/jm-wedding-website",
+    "license": "MIT",
+    "dependencies": {
+        "angular": "~1.4.0",
+        "jquery": ">= 1.9.1",
+        "bootstrap": "^3.3.5"
+    }
 }

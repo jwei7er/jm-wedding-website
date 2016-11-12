@@ -9,8 +9,6 @@
         var directive = {
             restrict: 'EA',
             scope: {},
-            controller: 'RsvpController',
-            controllerAs: 'vm',
             templateUrl: 'app/rsvp/rsvp.html'
         };
         return directive;
